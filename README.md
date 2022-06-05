@@ -4,7 +4,7 @@ This repository is modified from the original repository of [Flask-MVC](https://
 # Path introduction
 1）最上層 web 目錄是項目名稱，一個項目內可以有多個模塊(這邊叫app)，也就是應用，每個應用下有自己的setting，初始化文件，MVC架構。 
 
-2）runserver.py：與應用模塊平級，作为項目啟動文件
+2）runserver.py：與應用模塊平級，作為項目啟動文件
 
 3）第二级app目錄：模塊名稱
 
@@ -32,3 +32,11 @@ python runserver.py
 from app import db
 db.create_all()
 ```
+
+# Some screenshots
+## index.html
+![](screenshots/index_html.png)
+## list.html
+![](screenshots/list_html.png)
+## plot.html
+![](screenshots/plot_html.png)
