@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block body %}
+  <ul class=entries>
+  {% for entry in entries %}
+    <li><h2>{{ entry.date }}</h2><br><h3>TSMC: {{ byte_to_int(entry.TSMC) }}<br>Applied Materials: {{ byte_to_int(entry.AppliedMaterials) }}<br>ASML: {{ byte_to_int(entry.ASML) }}<br>SUMCO: {{ byte_to_int(entry.SUMCO) }}</h3>
+  {% else %}
+    <li><em>Unbelievable.  No entries here so far</em>
+  {% endfor %}
+  </ul>
+{% endblock %}
