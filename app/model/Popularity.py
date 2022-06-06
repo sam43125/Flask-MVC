@@ -15,6 +15,7 @@ class Popularity(db.Model):
         self.AppliedMaterials = AppliedMaterials
         self.ASML = ASML
         self.SUMCO = SUMCO
+        self.data = (date, TSMC, AppliedMaterials, ASML, SUMCO)
 
     def __repr__(self):
-        return '<Popularity %r %r %r %r %r>' % (self.date, self.TSMC, self.AppliedMaterials, self.ASML, self.SUMCO)
+        return (self.date, self.TSMC, self.AppliedMaterials, self.ASML, self.SUMCO)
