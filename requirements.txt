@@ -32,3 +32,5 @@ wincertstore==0.2
 zipp==3.8.0
 prometheus_client
 locust
+pytest
+pytest-cov
