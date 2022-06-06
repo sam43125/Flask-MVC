@@ -33,6 +33,9 @@ from app import db
 db.create_all()
 ```
 
+# Digital Business Deploy on GKE
+* http://34.149.58.163/
+
 # Some screenshots
 ## index.html
 ![](screenshots/index_html.png)
@@ -40,3 +43,9 @@ db.create_all()
 ![](screenshots/list_html.png)
 ## plot.html
 ![](screenshots/plot_html.png)
+## Grafana
+![](screenshots/Grafana.png)
+* http://104.199.218.228:3000/d/bXTb76rnk/prometheus-2-0?orgId=1
+## Prometheus
+![](screenshots/Prometheus.png)
+* http://34.80.138.166:8086/

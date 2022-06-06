@@ -18,6 +18,7 @@ services:
     image: grafana/grafana
     volumes:
         - grafana_data:/var/lib/grafana
+        - ./grafana.json:/etc/grafana/grafana.json
     environment:
       - GF_SECURITY_ADMIN_PASSWORD=pass
     depends_on:

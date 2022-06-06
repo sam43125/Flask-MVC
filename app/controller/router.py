@@ -30,6 +30,7 @@ def get_interest_over_time(keywords=["tsmc", "Applied Materials", "ASML", "SUMCO
 
 @app.route('/list')
 def _list():
+    list_requests.inc()
     if not Popularity.query.filter_by(id=1).first():
         df = get_interest_over_time()
         for row in range(len(df)):
