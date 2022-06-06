@@ -1,0 +1,14 @@
+global:
+  scrape_interval: 5s
+  external_labels:
+      monitor: 'demo-monitor'
+
+# scrape_configs 則是抓取來源，這邊先設定我們 prometheus 本體 server 和 flask api_monitor，docker-compose 會把 service 加入 default network 所以可以用 web:8080 找到 flask app web service
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['prometheus:9090']
+  - job_name: 'api_monitor'
+    scrape_interval: 5s
+    static_configs:
+        - targets: ['web:8080']
