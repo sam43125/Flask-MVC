@@ -3,7 +3,7 @@ DEBUG = True
 
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 # TODO: Try not hardcode the secret key
-SECRET_KEY='A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
+SECRET_KEY= os.environ.get('SECRET_KEY')
 
 DATABASE = 'myweb.sqlite'
 SQLALCHEMY_DATABASE_URI = "sqlite:///" + \
