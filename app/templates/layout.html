@@ -4,8 +4,17 @@
 <div class=page>
     <h1>Digital Business</h1>
     <div class=metanav>
-        <a href="{{ url_for('_list') }}">list</a>
-        <a href="{{ url_for('plot') }}">plot</a>
+        <font size="3"><a href="{{ url_for('_list') }}">list</a></font><br>
+        <font size="3"><a href="{{ url_for('plot') }}">plot</a></font>
+        <form action="/" method="post">
+            請輸入供應商<input type="text" name='nm'><br>
+            請輸入欲查詢時間(MM.DD.YYYY)<br>
+            From <input type="text" name='from'>
+            To <input type="text" name='to'><br>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
     </div>
     {% block body %}{% endblock %}
 </div>
