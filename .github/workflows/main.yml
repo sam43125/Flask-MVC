@@ -47,7 +47,7 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run pytest
         run: |
-          python -m pytest . tests --doctest-modules --junitxml=test-results.xml --cov-config=.coveragerc --cov=. --cov-report=html
+          python -m pytest runserver.py tests --doctest-modules --junitxml=test-results.xml --cov-config=.coveragerc --cov=. --cov-report=html
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
