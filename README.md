@@ -27,7 +27,7 @@ python runserver.py
 ```
 # How to test
 ```sh
-python -m pytest . tests --doctest-modules --junitxml=test-results.xml --cov-config=.coveragerc --cov=. --cov-report=html
+python -m pytest runserver.py tests --doctest-modules --junitxml=test-results.xml --cov-config=.coveragerc --cov=. --cov-report=html
 ```
 1) Coverage結果，會放在htmlcov 資料夾
 2) 點擊程式的.html檔案，確認Coverage狀況
