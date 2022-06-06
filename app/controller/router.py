@@ -1,10 +1,11 @@
 from app.model.Popularity import Popularity
+from app import app, db
+
+from flask import render_template
 from pytrends.request import TrendReq
 import pandas as pd
 import base64
-
-from app import app, db
-from flask import render_template
+import sys
 
 @app.route('/')
 def show_entries():
@@ -50,6 +51,5 @@ def popularity_to_dataframe(popularities):
 @app.context_processor
 def utility_processor():
     def byte_to_int(byte):
-        # TODO: Check endianness of the running machine
-        return int.from_bytes(byte, "little")
+        return int.from_bytes(byte, sys.byteorder)
     return dict(byte_to_int=byte_to_int)
