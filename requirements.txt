@@ -30,3 +30,5 @@ urllib3==1.26.9
 Werkzeug==2.1.2
 wincertstore==0.2
 zipp==3.8.0
+pytest
+pytest-cov

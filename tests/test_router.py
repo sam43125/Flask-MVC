@@ -10,6 +10,3 @@ from app.controller import router
 def test_get_interest_over_time():
     info = router.get_interest_over_time()
     assert len(info) > 0
-
-if __name__ == '__main__':
-    test_get_interest_over_time()
