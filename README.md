@@ -25,7 +25,12 @@ This repository is modified from the original repository of [Flask-MVC](https://
 python -m pip install -r requirements.txt
 python runserver.py
 ```
-
+# How to test
+```sh
+python -m pytest . tests --doctest-modules --junitxml=test-results.xml --cov-config=.coveragerc --cov=. --cov-report=html
+```
+1) Coverage結果，會放在htmlcov 資料夾
+2) 點擊程式的.html檔案，確認Coverage狀況
 # How to create a new database (myweb.sqlite)
 ```python
 # In app directory
