@@ -1,4 +1,3 @@
-from requests import request
 from app.model.Popularity import Popularity
 from app import app, db
 from flask import redirect, render_template, Response, url_for, request
