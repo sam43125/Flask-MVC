@@ -34,3 +34,7 @@ prometheus_client
 locust
 pytest
 pytest-cov
+wordcloud
+nltk
+requests-html
+beautifulsoup4
