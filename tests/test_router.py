@@ -69,7 +69,6 @@ def test_html_getText():
     orignal_text = crawler.html_getText(soup)
     assert len(orignal_text) > 0
 
-#router.google_search("TSMC","02.12.2022","06.06.2022")
 @pytest.fixture
 def client():
     return app.test_client()
