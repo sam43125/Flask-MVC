@@ -1,4 +1,4 @@
-# Digital Business
+# Digital Business [![pytest](https://github.com/sam43125/Flask-MVC/actions/workflows/main.yml/badge.svg)](https://github.com/sam43125/Flask-MVC/actions/workflows/main.yml)
 This repository is modified from the original repository of [Flask-MVC](https://github.com/arthurtibame/Flask-MVC)
 
 # Path introduction
