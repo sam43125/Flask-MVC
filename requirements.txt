@@ -31,9 +31,6 @@ Werkzeug==2.1.2
 wincertstore==0.2
 zipp==3.8.0
 prometheus_client
-<<<<<<< HEAD
-locust
-=======
 locust
 pytest
 pytest-cov
@@ -41,4 +38,3 @@ wordcloud
 nltk
 requests-html
 beautifulsoup4
->>>>>>> origin
