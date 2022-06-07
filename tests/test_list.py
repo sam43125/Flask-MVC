@@ -1,5 +1,6 @@
 import pytest
 from app import app
+from app.model.Popularity import Popularity
 import sys
 import os
 current = os.path.dirname(os.path.realpath(__file__))
@@ -11,6 +12,7 @@ def client():
     return app.test_client()
 
 def test_list(client):
+    Popularity.query.delete()
     resp = client.get('/list')
     assert resp.status_code == 200
 

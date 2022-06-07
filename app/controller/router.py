@@ -129,7 +129,7 @@ class GoogleCrawler():
     def html_getText(self,soup):
         orignal_text = ''
         for el in soup.find_all('p'):
-            orignal_text += ''.join(el.find_all(text=True))
+            orignal_text += ''.join(el.find_all(string=True))
         return orignal_text
     
     def word_count(self, text):
