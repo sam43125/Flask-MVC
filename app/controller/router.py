@@ -1,17 +1,10 @@
 from app.model.Popularity import Popularity
 from app import app, db
-<<<<<<< HEAD
-from flask import render_template,Response
-import prometheus_client
-from prometheus_client import Counter
-
-=======
 from flask import redirect, render_template, Response, url_for, request
 from requests_html import HTMLSession
 from bs4 import BeautifulSoup
 import prometheus_client
 from prometheus_client import Counter
->>>>>>> origin
 from pytrends.request import TrendReq
 import nltk
 import pandas as pd
@@ -26,13 +19,6 @@ import numpy
 total_requests = Counter('request_count', 'Total webapp request count')
 list_requests = Counter('list_request_count', 'Total list request count')
 plot_requests = Counter('plot_request_count', 'Total plot request count')
-<<<<<<< HEAD
-
-@app.route('/')
-def show_entries():
-    total_requests.inc()
-    return render_template('index.html')
-=======
 nltk.download('punkt')
 nltk.download('stopwords')
 
@@ -49,12 +35,6 @@ def show_entries():
             return redirect(url_for("google_search",company=c, _from=f, _to=t))
     else:
         return render_template('index.html')
-
-@app.route('/metrics')
-def requests_count():
-    total_requests.inc()
-    return Response(prometheus_client.generate_latest(), mimetype='text/plain')
->>>>>>> origin
 
 @app.route('/metrics')
 def requests_count():
