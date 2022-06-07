@@ -19,8 +19,7 @@ import numpy
 total_requests = Counter('request_count', 'Total webapp request count')
 list_requests = Counter('list_request_count', 'Total list request count')
 plot_requests = Counter('plot_request_count', 'Total plot request count')
-nltk.download('punkt')
-nltk.download('stopwords')
+
 
 @app.route('/', methods=['GET','POST'])
 def show_entries():
