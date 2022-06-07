@@ -16,7 +16,6 @@ from nltk.tokenize import word_tokenize
 from PIL import Image
 import wordcloud
 import numpy
-import matplotlib.pyplot as plt
 
 total_requests = Counter('request_count', 'Total webapp request count')
 list_requests = Counter('list_request_count', 'Total list request count')
