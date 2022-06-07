@@ -26,9 +26,9 @@ nltk.download('stopwords')
 def show_entries():
     total_requests.inc()
     if request.method == "POST":
-        c = request.form['nm']
-        f = request.form['from']
-        t = request.form['to']
+        c = request.form.get('nm', '')
+        f = request.form.get('from', '')
+        t = request.form.get('to', '')
         if (f == '' or t == ''):
             return redirect(url_for("google_search",company=c))
         else:
