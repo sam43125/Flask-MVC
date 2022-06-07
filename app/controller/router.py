@@ -135,9 +135,8 @@ class GoogleCrawler():
     def word_count(self, text):
         counts = dict()
         stop_words = set(stopwords.words('english'))
-        List=["(", ")", "&", ".", "'", ":", "`", "—", ",", "%", "’", "'s", "The"]
+        List = ["(", ")", "&", ".", "'", ":", "`", "—", ",", "%", "’", "'s", "The"]
         words = word_tokenize(text)
-        #words = text.replace(',',' ').split()
         for word in words:
             if word not in stop_words and word not in List:
                 if word in counts:
@@ -179,28 +178,22 @@ def google_search(company, _from, _to):
         if bool(result_wordcount) == False:
             result_wordcount = temp
         else:
-            for i,j in temp.items():
-                if (i in result_wordcount.keys()):
+            for i, j in temp.items():
+                if i in result_wordcount.keys():
                     result_wordcount[i] += j
                 else:
                     result_wordcount[i] = j
 
-    #print(sorted(result_wordcount.items(), key=lambda x:x[1], reverse=True))
-
     if bool(result_wordcount) == False:
-        decoded = base64.b64encode(open('wordcloud\Tsmc.svg.png', "rb").read()).decode('ascii')
+        decoded = base64.b64encode(open('wordcloud/Tsmc.svg.png', "rb").read()).decode('ascii')
     else:
-        pic = numpy.array(Image.open('wordcloud\clouds.png'))
-        pic = (pic==0)*255
+        pic = numpy.array(Image.open('wordcloud/clouds.png'))
+        pic = (pic == 0) * 255
         wc = wordcloud.WordCloud(background_color='white',
-                        margin=2,
-                        mask=pic,
-                        #font_path = 'kaiu.ttf',
-                        #max_words=50,
-                        #width=1080, height=720,
-                        # relative_scaling=0.5
-                        )
+                                 margin=2,
+                                 mask=pic,
+                                )
         wc.generate_from_frequencies(result_wordcount)
-        wc.to_file('wordcloud\wordcloud.jpg')
-        decoded = base64.b64encode(open('wordcloud\wordcloud.jpg', "rb").read()).decode('ascii')
+        wc.to_file('wordcloud/wordcloud.jpg')
+        decoded = base64.b64encode(open('wordcloud/wordcloud.jpg', "rb").read()).decode('ascii')
     return render_template('plot.html', imagedata=decoded) 
