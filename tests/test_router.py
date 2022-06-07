@@ -73,10 +73,3 @@ def test_html_getText():
 @pytest.fixture
 def client():
     return app.test_client()
-'''
-def test_list(client):
-    resp = client.get('/google_search/TSMC/02.12.2022/06.06.2022')
-    assert resp.status_code == 200
-    resp2 = client.get('/google_search/TSMC')
-    assert resp2.status_code == 200
-'''
