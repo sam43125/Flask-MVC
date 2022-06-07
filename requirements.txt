@@ -36,3 +36,5 @@ pytest
 pytest-cov
 wordcloud
 nltk
+requests-html
+beautifulsoup4
