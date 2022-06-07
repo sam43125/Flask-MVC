@@ -29,7 +29,7 @@ def show_entries():
         c = request.form['nm']
         f = request.form['from']
         t = request.form['to']
-        if (f== '' or t == ''):
+        if (f == '' or t == ''):
             return redirect(url_for("google_search",company=c))
         else:
             return redirect(url_for("google_search",company=c, _from=f, _to=t))
